@@ -1,9 +1,10 @@
 'use strict';
 
+//Препроцессор Pug
 module.exports = function () {
 
     $.gulp.task('pug', function () {
-        return $.gulp.src('./source/template/*.pug')
+        return $.gulp.src($.config.sourceFolderRoot + '/' + $.config.sourceFolderPug + '/*.pug')
             .pipe($.gp.pug({ pretty: true}))
             .on('error', $.gp.notify.onError(function
                 (error) {
@@ -12,7 +13,7 @@ module.exports = function () {
                         message: error.message
                     }
                 }))
-            .pipe($.gulp.dest('./build/'));
+            .pipe($.gulp.dest($.config.outputFolderRoot));
     });
 
 };

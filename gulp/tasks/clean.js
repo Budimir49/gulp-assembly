@@ -1,10 +1,11 @@
 'use strict';
 
+//Удаление выходной папки
 module.exports = function () {
 
     $.gulp.task('clean', function () {
         return $.del([
-            'build'
+            $.config.outputFolderRoot
         ]);
     });
 };

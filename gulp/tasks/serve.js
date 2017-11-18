@@ -1,12 +1,13 @@
 'use strict';
 
+//Live reloaded
 module.exports = function () {
     $.gulp.task('serve', function () {
         $.browserSync.init({
             open: true,
-            server: './build'
+            server: $.config.outputFolderRoot
         });
-        $.browserSync.watch('build', $.browserSync.reload);
+        $.browserSync.watch($.config.outputFolderRoot, $.browserSync.reload);
     });
 };
 

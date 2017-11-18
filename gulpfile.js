@@ -1,10 +1,10 @@
 'use strict';
 
-
 global.$ = {
     path: {
         task: require('./gulp/paths/tasks.js')
     },
+    config: require('./gulp/config'),
     gulp: require('gulp'),
     del: require('del'),
     gp: require('gulp-load-plugins')(),
@@ -19,7 +19,9 @@ $.gulp.task('default', $.gulp.series(
     'clean',
     $.gulp.parallel(
         'sass',
-        'pug'
+        'pug',
+        'js:process',
+        'css:foundation'
     ),
     $.gulp.parallel(
         'watch',
