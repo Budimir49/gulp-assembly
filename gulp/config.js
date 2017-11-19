@@ -15,6 +15,19 @@ module.exports = {
     autoPrefix: ['last 3 version', '> 1%', 'ie 8', 'ie 9', 'Opera 12.1'],
 
     pathNormalizeCss:  './node_modules/normalize.css/normalize.css',
-    pathjQuery:  './node_modules/jquery/dist/jquery.min.js'
+    pathjQuery:  './node_modules/jquery/dist/jquery.min.js',
 
+    skills : {
+        "skills" : [
+            {
+                "Frontend" : ['HTML5', 'CSS3', 'JavaScript & jQuery']
+            },
+            {
+                "Backend" : ['PHP', 'MySQL', 'Node.js & npm', 'Mongo.db']
+            },
+            {
+                "WorkFlow" : ['Git', 'Gulp', 'Bower']
+            }
+        ]
+    }
 };

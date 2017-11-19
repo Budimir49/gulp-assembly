@@ -1,6 +1,5 @@
-body
-{
-    background-color: black;
-    color: yellow;
-}
 
+
+@import 'config/**/*.scss';
+@import 'layout/**/*.scss';
+@import 'blocks/**/*.scss';

@@ -5,7 +5,8 @@ module.exports = function () {
 
     $.gulp.task('clean', function () {
         return $.del([
-            $.config.outputFolderRoot
+            $.config.outputFolderRoot + '/css',
+            $.config.outputFolderRoot + '/js'
         ]);
     });
 };
